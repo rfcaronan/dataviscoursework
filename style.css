@@ -1,0 +1,75 @@
+body {
+    font-family: "Merriweather", serif;
+    padding-top: 3em;
+}
+
+.checkbox {
+  box-sizing: content-box;
+}
+
+#intro,
+#vis1,
+#vis3,
+#vis2 {
+    width: 65%;
+    margin: auto;
+}
+
+.one-column-text {
+    width: 65%;
+    margin: auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+p {
+    color: #606060;
+}
+
+.white-text {
+    fill: white;
+}
+
+.bold-text {
+    font-weight: bolder;
+}
+
+.country-label {
+    font-size: .75rem;
+    font-weight: bolder;
+}
+
+.legend_text  {
+    font-size: .6rem;
+}
+
+.graph-text {
+    font-size: .85rem;
+}
+
+.credits {
+    font-size: .75rem;
+    opacity: .8;
+}
+
+#vis1 > div:last-child,
+#vis2 > div:last-child {
+    padding-bottom: 3em;
+}
+
+.tooltip-text-div {
+    text-align: left;
+    position: absolute;
+    height: auto;
+    width: 15em;
+    z-index: 100;
+    background-color: black;
+    padding: .7em;
+    border-radius: .1em;
+    /*box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);*/
+    border: black solid .2em;
+    color: white;
+    font-size: .9rem;
+}

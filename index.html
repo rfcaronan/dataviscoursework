@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Political Parties and Women's Rights</title>
+    <!-- Standard meta -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Google font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div id="intro">
+        <div>
+            <h1 class="center-text bold-text">Where the world's political parties stand on women's rights</h1>
+        </div>
+
+        <br>
+        
+        <div class="one-column-text">
+            <p>The three visualisations provide an overview of the position of political parties in parliaments around the world on women’s rights policies. The main data used was the 2019 Global Party Survey of Pippa Norris (Harvard University).</p>
+        </div>
+    </div>
+
+    <div id="vis1">
+        
+        <br>
+
+        <div>
+            <h4 class="bold-text">Party ideology and women's rights policies</h4>
+            <p class="black-text">The positive relation between party ideology and support for women’s rights in the world's parliaments is strong among parties taking extreme liberal views but weakens among those at midpoint of the ideological spectrum. This relation declines as the income level of countries decreases.</p>
+        </div>
+
+
+        <div id="scatter" class="center-text"></div>
+
+        <br>
+
+        <div>
+            <p class="credits"><span class="bold-text">NOTES:</span> Ideology and position are estimated on a 10-point scale: from 0 (‘very liberal’) to 10 (‘very conservative’) and from 0 ('strongly favours policies on women's rights) to 10 ('strongly opposes policies on women's rights'). The diagram includes polled position of 701 political parties in the Lower House of Parliament or Congress in 117 countries. Data excludes parties with missing information on their social values, position on women's rights, and vote share in legislative elections. The World Bank <a href="https://blogs.worldbank.org/opendata/new-country-classifications-income-level-2019-2020">classifies</a> countries into four income groups based on their gross national income (GNI) per capita: high (&gt;USD 12,375), upper-middle (USD 3,996– USD 12,375), lower-middle (USD 1,026– USD 3,995), and low (&lt;USD 3,995). <span class="bold-text">SOURCES:</span><a href="https://www.globalpartysurvey.org/what-we-do"> 2019 data from the Global Party Survey</a> and <a href="https://www.wider.unu.edu/database/wiid">World Income Inequality Database, 2018 version February 2020</a></p>    
+        </div>
+
+    </div>
+
+    <div id="vis2">
+        
+        <br>
+
+        <div>
+            <h4 class="bold-text">Party position on women's rights policies</h4>
+            <p>Most of the world’s parties elected to parliament support women’s rights policies, according to experts.</p>
+        </div>
+
+
+        <div id="histogram" class="center-text"></div>
+
+        <br>
+
+        <div>
+            <p class="credits"><span class="bold-text">NOTES:</span> Position is estimated on a 10-point scale, ranging from 0 ('strongly favours policies on women's rights) to 10 ('strongly opposes policies on women's rights'). Country experts polled on the position of 954 political parties in the Lower House of Parliament or Congress in 159 countries. Data excludes parties with missing information on their position on women's rights. <span class="bold-text">SOURCES:</span><a href="https://www.globalpartysurvey.org/what-we-do"> 2019 data from the Global Party Survey</a></p>    
+        </div>
+    </div>
+
+    <div id="vis3">
+
+        <div>
+            <h4 class="bold-text">Parties take extreme position against women's rights</h4>
+            <p>Experts placed 95 parties elected to parliament towards the end of the scale, which ranges from 0 ('strongly favours policies on women's rights) to 10 ('strongly opposes policies on women's rights).</p>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by score</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><input type="checkbox" class="checkbox2" value="Select all" id="select-all-score" checked=""><label class="graph-text" for="select-all-score">&nbsp;Select all</label></li>
+                <div class="dropdown-divider"></div>
+                <li><input type="checkbox" class="checkbox2 item2" value="C" checked><label class="graph-text">&nbsp;8–8.99</label></li>
+                <li><input type="checkbox" class="checkbox2 item2" value="D" checked><label class="graph-text">&nbsp;9–9.99</label></li>
+                <li><input type="checkbox" class="checkbox2 item2" value="E" checked><label class="graph-text">&nbsp;10</label></li>
+            </ul>
+        </div>
+
+
+        <br>
+
+        <div id="map" class="center-text"></div>
+        
+        <div>
+            <p class="credits"><span class="bold-text">NOTES:</span> Country experts polled on the position of 954 political parties in the Lower House of Parliament or Congress in 159 countries. Data excludes parties with missing information on their position on women's rights. <span class="bold-text">SOURCES:</span><a href="https://www.globalpartysurvey.org/what-we-do"> 2019 data from the Global Party Survey</a> and <a href="http://www.naturalearthdata.com/">Natural Earth Data</a></p>      
+        </div>
+    </div>
+
+    <!-- START OF JAVASCRIPT LINKS -->
+
+    <script>
+        document.getElementById("select-all-score").onclick = function() {
+            var checkboxes = document.getElementsByClassName("item2");
+                for (var checkbox of checkboxes) {
+                checkbox.checked = this.checked;
+            }
+        }
+    </script>
+    <!-- Load bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.0/d3-legend.js"></script>
+    <script src="script.js"></script>
+
+   
+
+    
+</body>
+</html>
