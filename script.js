@@ -141,7 +141,7 @@ d3.csv("data/datavis.csv", function(data) {
         .attr("text-anchor", "middle")
         .attr("transform", "translate("+ (width/2) +","+(height-(padding))+")")
         .attr("class", "graph-text")
-        .text("Favors << Position on Women's rights >> Opposes")
+        .text("Favors << Position on Women's Rights >> Opposes")
 
     var mouseover = function(d) {
         tooltipTextDiv.transition()
